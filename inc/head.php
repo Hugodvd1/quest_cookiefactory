@@ -48,6 +48,11 @@
         </div><!-- /.container-fluid -->
     </nav>
     <div class="container-fluid text-right">
-        <strong>Hello Wilder !</strong>
-    </div>
+    <strong>
+            <?php if (isset($_SESSION['name'])): ?>
+                Hello <?= $_SESSION['name'] . ' '?>! 
+            <?php else: ?>
+                Hello Wilder ! 
+            <?php endif; ?>
+        </strong></div>
 </header>
